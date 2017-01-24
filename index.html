@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bookshelf</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<div class="bookshelf container">
+    <div class="bookshelf__wrapper row">
+        <div class="bookshelf__primary col-md-6">
+            <h2 class="page-header text-success">add book</h2>
+            <form id="bookShelfForm" class="bookshelf__edit" method="post" action="#" role="form">
+                <div class="form-group">
+                    <label for="bookshelfAuthor">book author</label>
+                    <input type="text" class="form-control" id="bookshelfAuthor" pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="Book Author" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookshelfYear">book year</label>
+                    <input type="text" class="form-control" id="bookshelfYear" pattern="^\d*\.?\d+$" placeholder="Book Year">
+                </div>
+                <div class="form-group">
+                    <label for="bookshelfTitle">book title</label>
+                    <input type="text" class="form-control" id="bookshelfTitle" pattern="^[a-zA-Z0-9_-]{3,26}$" placeholder="Book Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookshelfPages">book pages</label>
+                    <input type="text" class="form-control" id="bookshelfPages" pattern="^\d*\.?\d+$" placeholder="Book Pages">
+                </div>
+                <div class="bookshelf__controls form-group">
+                    <button id="bookshelfSave" type="submit" class="btn btn-primary" role="button">add \ edit book</button>
+                    <button id="bookshelfEdit" type="button" class="btn btn-primary" role="button">add \ edit book</button>
+                </div>
+            </form>
+        </div>
+        <div id="bookShelfSecondary" class="bookshelf__secondary col-md-6">
+            <h2 class="page-header text-success">list of books</h2>
+            <ul id="bookShelfList" class="bookshelf__list list-unstyled"></ul>
+        </div>
+    </div>
+</div>
+
+    <!--SCRIPT-->
+    <script src="js/app.js"></script>
+</body>
+</html>
